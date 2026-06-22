@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Card from "../src/components/Card"
 
-export default function Home() {
+export default function Home({ produtosCustom }) {
   const [produtos, setProdutos] = useState([])
   const [carregando, setCarregando] = useState(true)
 
@@ -19,11 +19,13 @@ export default function Home() {
     return <div className="loading">Carregando...</div>
   }
 
+  const todosProdutos = [...produtosCustom, ...produtos]
+
   return (
     <section className="home">
       <h1 className="home-title">Catálogo de Produtos</h1>
       <div className="produtos-grid">
-        {produtos.map((produto) => (
+        {todosProdutos.map((produto) => (
           <Card
             key={produto.id}
             id={produto.id}

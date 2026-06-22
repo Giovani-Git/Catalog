@@ -4,7 +4,7 @@ import Input from "../src/components/Input"
 import Label from "../src/components/Label"
 import Modal from "../src/components/Modal"
 
-export default function Cadastro() {
+export default function Cadastro({ adicionarProduto }) {
   const [nome, setNome] = useState("")
   const [preco, setPreco] = useState("")
   const [descricao, setDescricao] = useState("")
@@ -18,6 +18,7 @@ export default function Cadastro() {
   function confirmarCadastro() {
     const produto = { nome, preco: parseFloat(preco), descricao }
     console.log(produto)
+    adicionarProduto(produto)
     setModalAberto(false)
     setNome("")
     setPreco("")
