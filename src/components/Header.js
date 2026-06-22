@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <Link href="/" className="header-logo">
-          🎮 Catalogo Games
+          👗 Fashion Store
         </Link>
         <nav className="header-nav">
           <Link href="/">Home</Link>
