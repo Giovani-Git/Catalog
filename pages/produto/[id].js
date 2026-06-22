@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Link from "next/link"
 import Img from "../../src/components/Img"
-import Botao from "../../src/components/Botao"
 
 export default function DetalhesProduto() {
   const router = useRouter()
@@ -40,8 +39,8 @@ export default function DetalhesProduto() {
           <p className="detalhes-preco">R$ {produto.price.toFixed(2)}</p>
           <p className="detalhes-categoria">Categoria: {produto.category}</p>
           <p className="detalhes-descricao">{produto.description}</p>
-          <Link href="/">
-            <Botao>Voltar</Botao>
+          <Link href="/" className="botao">
+            Voltar
           </Link>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Botao from "../src/components/Botao"
+import Input from "../src/components/Input"
+import Label from "../src/components/Label"
 import Modal from "../src/components/Modal"
 
 export default function Cadastro() {
@@ -31,18 +33,17 @@ export default function Cadastro() {
       <h1>Cadastrar Novo Produto</h1>
       <form className="cadastro-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="nome">Nome</label>
-          <input
+          <Label htmlFor="nome">Nome</Label>
+          <Input
             id="nome"
-            type="text"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="preco">Preço</label>
-          <input
+          <Label htmlFor="preco">Preço</Label>
+          <Input
             id="preco"
             type="number"
             step="0.01"
@@ -52,7 +53,7 @@ export default function Cadastro() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="descricao">Descrição</label>
+          <Label htmlFor="descricao">Descrição</Label>
           <textarea
             id="descricao"
             value={descricao}

@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Img from "./Img"
-import Botao from "./Botao"
 
 export default function Card({ id, title, image, price }) {
   return (
@@ -11,8 +10,8 @@ export default function Card({ id, title, image, price }) {
       <div className="card-body">
         <h3 className="card-title">{title}</h3>
         <p className="card-price">R$ {price.toFixed(2)}</p>
-        <Link href={`/produto/${id}`}>
-          <Botao>Ver Detalhes</Botao>
+        <Link href={`/produto/${id}`} className="botao">
+          Ver Detalhes
         </Link>
       </div>
     </div>
